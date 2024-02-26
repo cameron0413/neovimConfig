@@ -1,0 +1,9 @@
+{
+  "harpoon": { "branch": "master", "commit": "ccae1b9bec717ae284906b0bf83d720e59d12b91" },
+  "neon": { "branch": "main", "commit": "7765aaa7d1cd3804176140644640766e4411c766" },
+  "null-ls.nvim": { "branch": "main", "commit": "0010ea927ab7c09ef0ce9bf28c2b573fc302f5a7" },
+  "nvim-lspconfig": { "branch": "master", "commit": "d5b6d4366dfd7a1071b930defd365e6d0be258de" },
+  "nvim-surround": { "branch": "main", "commit": "703ec63aa798e5e07d309b35e42def34bebe0174" },
+  "plenary.nvim": { "branch": "master", "commit": "4f71c0c4a196ceb656c824a70792f3df3ce6bb6d" },
+  "telescope.nvim": { "branch": "master", "commit": "a5b69afa484038f1c4793e979d023edb478ebc0c" }
+}
