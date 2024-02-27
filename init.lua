@@ -73,4 +73,9 @@ vim.opt.expandtab = true  -- Converts tabs to spaces.
 vim.opt.number = true
 
 vim.cmd[[set number]]
-
+vim.cmd [[
+    highlight Normal guibg=none
+    highlight NonText guibg=none
+    highlight Normal ctermbg=none
+    highlight NonText ctermbg=none
+]]
