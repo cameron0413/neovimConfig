@@ -13,6 +13,8 @@ if not vim.loop.fs_stat(lazypath) then
 	end
 	vim.opt.rtp:prepend(lazypath)
 
+vim.cmd[[set number]]
+
 require("lazy").setup({
 	-- List your plugins here
 
@@ -23,6 +25,15 @@ require("lazy").setup({
 	{"ThePrimeagen/harpoon"},
 	{"nvim-telescope/telescope.nvim"},
 	{"rafamadriz/neon"},
+
+  {"hrsh7th/nvim-cmp"},
+  {"hrsh7th/cmp-buffer"},  -- Buffer completions
+  {"hrsh7th/cmp-path"},    -- Path completions
+  {"hrsh7th/cmp-cmdline"}, -- Command line completions
+  {"hrsh7th/cmp-nvim-lsp"},  -- LSP completions
+  {"saadparwaiz1/cmp_luasnip"}, -- Snippet completions
+  {"L3MON4D3/LuaSnip"}, -- Snippet engine
+  {"rafamadriz/friendly-snippets"}, -- A collection of snippets
 
 	{
 	"jose-elias-alvarez/null-ls.nvim",
@@ -37,6 +48,12 @@ require("lazy").setup({
 	})
 	end,
 	},
+  {
+    "windwp/nvim-autopairs",
+    config = function()
+        require("nvim-autopairs").setup({})
+    end
+  },
 
 	{
 	    "kylechui/nvim-surround",
@@ -59,9 +76,36 @@ require("null-ls").setup({
     },
 })
 
-require'lspconfig'.intelephense.setup{}
-
 require("cameronneovim")
+
+
+-------- END PLUGINS -----------
+---
+-------- BEGIN CONFIG ----------
+
+local cmp = require'cmp'
+cmp.setup({
+  snippet = {
+    expand = function(args)
+      require('luasnip').lsp_expand(args.body)
+    end,
+  },
+  mapping = cmp.mapping.preset.insert({
+    ['<C-b>'] = cmp.mapping.scroll_docs(-1),
+    ['<C-f>'] = cmp.mapping.scroll_docs(1),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),  -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+  }),
+  sources = cmp.config.sources({
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' },
+  }, 
+  {
+    { name = 'buffer' },
+  })
+})
+
+require'lspconfig'.intelephense.setup{}
 
 vim.cmd[[colorscheme neon]]
 
@@ -72,7 +116,6 @@ vim.opt.expandtab = true  -- Converts tabs to spaces.
 
 vim.opt.number = true
 
-vim.cmd[[set number]]
 vim.cmd [[
     highlight Normal guibg=none
     highlight NonText guibg=none
