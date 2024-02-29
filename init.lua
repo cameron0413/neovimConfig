@@ -107,6 +107,15 @@ cmp.setup({
 
 require'lspconfig'.intelephense.setup{}
 
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "php",
+  callback = function()
+    -- Add $ to the list of characters considered part of a word
+    vim.opt.iskeyword:append("$")
+  end,
+})
+
+
 vim.cmd[[colorscheme neon]]
 
 vim.opt.tabstop = 2       -- Number of spaces that a <Tab> in the file counts for.

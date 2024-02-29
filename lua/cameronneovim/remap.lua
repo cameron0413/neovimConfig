@@ -21,5 +21,12 @@ vim.keymap.set("n", "<C-h>", function() ui.nav_file(1) end)
 vim.keymap.set("n", "<C-t>", function() ui.nav_file(2) end)
 vim.keymap.set("n", "<C-n>", function() ui.nav_file(3) end)
 vim.keymap.set("n", "<C-s>", function() ui.nav_file(4) end)
+-- Scroll down in the buffer without moving the cursor
+vim.keymap.set('n', '<C-j>', '<C-e>', {noremap = true, silent = true})
+
+-- Scroll up in the buffer without moving the cursor
+vim.keymap.set('n', '<C-k>', '<C-y>', {noremap = true, silent = true})
 
 vim.api.nvim_set_keymap('n', '<C-S-V>', '<C-V>', { noremap = true })
+
+vim.api.nvim_set_keymap('n', '<C-c>', ':noh<CR>', {noremap = true, silent = true})
