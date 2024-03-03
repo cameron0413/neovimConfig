@@ -30,3 +30,5 @@ vim.keymap.set('n', '<C-k>', '<C-y>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<C-S-V>', '<C-V>', { noremap = true })
 
 vim.api.nvim_set_keymap('n', '<C-c>', ':noh<CR>', {noremap = true, silent = true})
+
+vim.api.nvim_buf_set_keymap(0, 'n', '<C-A-k>', '<cmd>lua vim.lsp.buf.hover()<CR>', { noremap = true, silent = true })

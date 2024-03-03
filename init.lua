@@ -13,7 +13,11 @@ if not vim.loop.fs_stat(lazypath) then
 	end
 	vim.opt.rtp:prepend(lazypath)
 
+vim.cmd[[set clipboard+=unnamed]]
+
 vim.cmd[[set number]]
+
+vim.cmd[[set nowrap]]
 
 require("lazy").setup({
 	-- List your plugins here
@@ -35,6 +39,9 @@ require("lazy").setup({
   {"L3MON4D3/LuaSnip"}, -- Snippet engine
   {"rafamadriz/friendly-snippets"}, -- A collection of snippets
 
+  {"windwp/nvim-ts-autotag"},
+  {"nvim-treesitter/nvim-treesitter"},
+
 	{
 	"jose-elias-alvarez/null-ls.nvim",
 	config = function()
@@ -51,7 +58,9 @@ require("lazy").setup({
   {
     "windwp/nvim-autopairs",
     config = function()
-        require("nvim-autopairs").setup({})
+        require("nvim-autopairs").setup({
+          check_ts = true
+        })
     end
   },
 
@@ -76,12 +85,35 @@ require("null-ls").setup({
     },
 })
 
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = {'html'}, -- Or specify {'html', 'javascript', 'css', ...} for only the languages you need
+  highlight = {
+    enable = true, -- Enable syntax highlighting
+  },
+  -- Add other Treesitter configurations as needed
+}
+
 require("cameronneovim")
 
 
 -------- END PLUGINS -----------
 ---
 -------- BEGIN CONFIG ----------
+
+-- PHP snippets setup for LuaSnip
+local ls = require("luasnip")
+local s = ls.snippet
+local t = ls.text_node
+local i = ls.insert_node
+local fmt = require("luasnip.extras.fmt").fmt
+
+ls.add_snippets("php", {
+  s("if", fmt("if ({}) {{\n\t{}\n}}", {i(1), i(2)})),
+  s("foreach", fmt("foreach ({} as {}) {{\n\t{}\n}}", {i(1, "$array"), i(2, "$value"), i(3)})),
+  s("for", fmt("for ({}; {}; {}) {{\n\t{}\n}}", {i(1, "$i = 0"), i(2, "$i < count"), i(3, "$i++"), i(4)})),
+  s("empty", fmt("empty({}) {}", {i(1, "$variable"), i(0)})),
+})
+
 
 local cmp = require'cmp'
 cmp.setup({
@@ -98,7 +130,7 @@ cmp.setup({
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
-    { name = 'luasnip' },
+    { name = 'luasnip', priority = 1000 },
   }, 
   {
     { name = 'buffer' },
