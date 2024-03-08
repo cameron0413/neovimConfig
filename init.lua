@@ -46,14 +46,14 @@ require("lazy").setup({
 	"jose-elias-alvarez/null-ls.nvim",
 	config = function()
 	require("null-ls").setup({
-	sources = {
-	    require("null-ls").builtins.formatting.phpcsfixer.with({
-		extra_args = {"--rules=@PSR12"},
-	    }),
-	},
+    sources = {
+        require("null-ls").builtins.formatting.phpcsfixer.with({
+      extra_args = {"--rules=@PSR12"},
+        }),
+    },
 
-	})
-	end,
+    })
+    end,
 	},
   {
     "windwp/nvim-autopairs",
