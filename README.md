@@ -46,4 +46,5 @@ This is just my humble configuration.
 * If you are editing a PHP file, then typing `viw` will select the entire variable name, including the $ preceding it.
 
 ### Dependencies:
+* Git ≥ 2.31.0 (for diffview.nvim)
 * [ripgrep](https://github.com/BurntSushi/ripgrep#installation)

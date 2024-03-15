@@ -33,4 +33,4 @@ vim.api.nvim_set_keymap('n', '<C-c>', ':noh<CR>', {noremap = true, silent = true
 
 vim.api.nvim_buf_set_keymap(0, 'n', '<C-A-k>', '<cmd>lua vim.lsp.buf.hover()<CR>', { noremap = true, silent = true })
 
-vim.api.nvim_create_user_command('VisualBlock', 'normal! <C-v>', {})
+vim.api.nvim_create_user_command('VB', 'normal! <C-v>', {})

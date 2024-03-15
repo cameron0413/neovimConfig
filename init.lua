@@ -29,6 +29,8 @@ require("lazy").setup({
 	{"ThePrimeagen/harpoon"},
 	{"nvim-telescope/telescope.nvim"},
 	{"rafamadriz/neon"},
+  {"sindrets/diffview.nvim"},
+  {"nvim-tree/nvim-web-devicons"},
 
   {"hrsh7th/nvim-cmp"},
   {"hrsh7th/cmp-buffer"},  -- Buffer completions
