@@ -19,6 +19,8 @@ vim.cmd[[set number]]
 
 vim.cmd[[set nowrap]]
 
+vim.cmd[[set mouse=]]
+
 require("lazy").setup({
 	-- List your plugins here
 
@@ -31,6 +33,7 @@ require("lazy").setup({
 	{"rafamadriz/neon"},
   {"sindrets/diffview.nvim"},
   {"nvim-tree/nvim-web-devicons"},
+  {"prettier/vim-prettier"},
 
   {"hrsh7th/nvim-cmp"},
   {"hrsh7th/cmp-buffer"},  -- Buffer completions

@@ -36,6 +36,8 @@ This is just my humble configuration.
 * `[ctrl] + t` - nav_file(2) (via Harpoon)
 * `[ctrl] + n` - nav_file(3) (via Harpoon)
 * `[ctrl] + s` - nav_file(4) (via Harpoon)
+* `[space] + fj` - Auto-format to JSON using Prettier
+* `[ctrl] + /` - Toggle double-slash comments on any lines highlighted (mostly used for me in PHP and JavaScript)
 
 ### Configurations:
 
@@ -48,3 +50,4 @@ This is just my humble configuration.
 ### Dependencies:
 * Git ≥ 2.31.0 (for diffview.nvim)
 * [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
+* Prettier
