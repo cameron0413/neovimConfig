@@ -30,7 +30,7 @@ This is just my humble configuration.
 * `[ctrl] + k` - scrolls up without moving the cursor
 * `[space] + pf` - find_files (via Telescope)
 * `[space] + ps` - find_string (via Telescope)
-* `[space] + ff` - Prompt for a directory, then search for strings within that directory (via Telescope)
+* `[space] + pd` - Prompt for a directory, then search for strings within that directory (via Telescope)
 * `[space] + a` - add_file (via Harpoon)
 * `[ctrl] + e` - toggle_quick_menu (via Harpoon)
 * `[ctrl] + h` - nav_file(1) (via Harpoon)
