@@ -2,13 +2,30 @@ This is just my humble configuration.
 
 ### Plugins:
 
-* [Lazy](https://github.com/folke/lazy.nvim) (as the plugin manager) 
+* [Lazy](https://github.com/folke/lazy.nvim) (as the plugin manager)
 * [Plenary](https://github.com/nvim-lua/plenary.nvim)
 * [Null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/MAIN.md)
 * [Harpoon](https://github.com/ThePrimeagen/harpoon)
 * [nvim-surround](https://github.com/kylechui/nvim-surround)
 * [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
-* [neon](https://github.com/rafamadriz/neon) (as the color scheme)
+* [Neon](https://github.com/rafamadriz/neon) (as the color scheme)
+* [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+* [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
+* [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+* [Diffview](https://github.com/sindrets/diffview.nvim)
+* [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)
+* [vim-prettier](https://github.com/prettier/vim-prettier)
+* [keystrokes.nvim](https://github.com/kdheepak/keystrokes.nvim)
+* [symbols-outline.nvim](https://github.com/simrat39/symbols-outline.nvim)
+* [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+* [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
+* [cmp-path](https://github.com/hrsh7th/cmp-path)
+* [cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline)
+* [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
+* [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
+* [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag)
+* [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+* [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
 
 #### LSP setup for PHP:
 * [nvim-cmp](https://github.com/nvim-lua/plenary.nvim)
