@@ -34,6 +34,8 @@ require("lazy").setup({
   {"sindrets/diffview.nvim"},
   {"nvim-tree/nvim-web-devicons"},
   {"prettier/vim-prettier"},
+  {"kdheepak/keystrokes.nvim"},
+  {"simrat39/symbols-outline.nvim"},
 
   {"hrsh7th/nvim-cmp"},
   {"hrsh7th/cmp-buffer"},  -- Buffer completions

@@ -30,6 +30,7 @@ This is just my humble configuration.
 * `[ctrl] + k` - scrolls up without moving the cursor
 * `[space] + pf` - find_files (via Telescope)
 * `[space] + ps` - find_string (via Telescope)
+* `[space] + ff` - Prompt for a directory, then search for strings within that directory (via Telescope)
 * `[space] + a` - add_file (via Harpoon)
 * `[ctrl] + e` - toggle_quick_menu (via Harpoon)
 * `[ctrl] + h` - nav_file(1) (via Harpoon)
@@ -38,6 +39,7 @@ This is just my humble configuration.
 * `[ctrl] + s` - nav_file(4) (via Harpoon)
 * `[space] + fj` - Auto-format to JSON using Prettier
 * `[ctrl] + /` - Toggle double-slash comments on any lines highlighted (mostly used for me in PHP and JavaScript)
+* `[ctrl] + r`, followed by `"` and `[enter]` - pastes whatever is on Neovim's clipboard into the page or global string search
 
 ### Configurations:
 
@@ -46,6 +48,7 @@ This is just my humble configuration.
 * Numbers are always displayed
 * Background is the same as whatever your terminal is
 * If you are editing a PHP file, then typing `viw` will select the entire variable name, including the $ preceding it.
+* Not really a configuration, but `:VB` will enter Visual Block mode, allowing for column editing.
 
 ### Dependencies:
 * Git ≥ 2.31.0 (for diffview.nvim)
